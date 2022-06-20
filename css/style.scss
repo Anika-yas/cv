@@ -383,19 +383,19 @@ body{
 	&__container {
 		padding: 20px 10px;
 		background-image: linear-gradient(to right, #cfcfcf, #cbcbcc, #c8c7c8, #c6c2c4, #c3bebf, #c5c0c1, #c7c1c3, #c9c3c5, #cfccce, #d6d4d6, #ddddde, #e5e5e5);
-		font-size: 12px;
+		font-size: 14px;
 	}
 	// .footer__contacts
 	&__contacts {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		gap: 20px;
 	}
 	// .footer__bottom
 	&__bottom {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 	}
 	// .footer__copyright
