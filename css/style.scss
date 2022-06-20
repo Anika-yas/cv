@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,700&family=Roboto:wght@400;500;700&display=swap');
+
+
+// Обнуление
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+
+body,
+html {
+	height: 100%;
+	line-height: 1;
+}
+
+// ============================================
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: rgba(24, 15, 4, 1);
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// Прижимаем footer
+}
+[class*="__container"] {
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 15px;
+	background-color: #FFFFFF;
+    // background-color: rgb(252, 236, 115);
+
+}
+// ============================================
+.profile {
+    &__container {
+        background-color: rgba(151, 151, 151, 0.4);
+        padding: 20px 10px 10px;
+    }
+    // .profile__nav
+    &__nav {
+    }
+    // .profile__list
+    &__list {
+        display: flex;
+        gap: 30px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    // .profile__item
+    &__item {
+        font-size: 14px;
+        font-weight: 500;
+        transition: 0.3s;
+        padding: 0 0 10px;
+		color:#FFFFFF;
+        &:hover {
+            border-bottom: 1.5px solid #fff;
+        }
+    }
+    // .profile__link
+    &__link {
+    }
+}
+// ======================================================================
+// ================================================================
+// ================== main ==========================
+.main {
+    flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	// gap: 50px;
+    // background-color: rgba(68, 68, 68, 0.12);
+}
+
+    // ================== .about-me ==========================
+.about-me {
+		// .about-me__container
+		&__container {
+            padding: 50px 30px;
+            display: flex;
+            // flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+			background: rgb(255,255,255);
+			background: linear-gradient(131deg, rgba(255,255,255,1) 14%, rgba(213,209,209,1) 40%, rgba(255,250,250,1) 73%, rgba(255,255,255,1) 91%);
+			@media (max-width:1110px) {
+				flex-direction: column;
+				align-items:center;
+			}
+		}
+		// .about-me__img
+		&__img {
+            flex: 0 0 300px;
+            height: 360px;
+            object-fit: cover;
+            object-position: right top;
+            border-radius: 10px ;
+			@media (max-width:1110px) {
+				flex-direction: column;
+				width: 300px;
+				flex: 0 0 360px;
+				object-fit: cover;
+				object-position: top;
+				border-radius: 20%;
+
+			}
+		}
+		// .about-me__box
+		&__box {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 50px 0 0;
+            align-items: center;
+            justify-content: space-between;
+		}
+		// .about-me__title
+		&__title {
+            font-size: 40px;
+            line-height: 1.5;
+            font-weight: 700;
+		}
+		// .about-me__subtitle
+		&__subtitle {
+            font-size: 22px;
+            font-weight: 500;
+            flex: 1 1 auto;
+		}
+		// .about-me__contacts
+		&__contacts {
+            display: flex;
+            gap: 20px;
+		}
+		// .about-me__text
+		&__text {
+            line-height: 1.5;
+		}
+}
+
+// ================== contacts ==========================
+
+.contacts {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 10px;
+    &:hover{
+        background-color: rgba(102, 102, 102, 0.503);
+        border-radius: 10px;
+    }
+		// .contacts__img
+		&__img {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+		}
+		// .contacts__text
+		&__text {
+            font-weight: 500;
+		}
+}
+// ================== summery ==========================
+
+.summery {
+	// .summery__container
+	&__container {
+		padding: 25px 45px 30px;
+	}
+	// .summery__title
+	&__title {
+		margin: 0 0 20px 0;	
+	}
+	// .summery__text
+	&__text {
+		line-height: 1.5;
+	}
+}
+.title {
+	font-size: 36px;
+	line-height: 1.5;
+	font-weight: 500;
+	// text-align: center;
+	padding: 0 0 10px;
+	border-bottom: 2px solid #000;
+	&_w {
+		color:#FFFFFF;
+		border-bottom: 2px solid #fff;
+	}
+
+}
+// ================== summery ==========================
+
+.skills {
+		// .skills__container
+		&__container {
+			padding: 25px 45px 30px;
+			background-image: linear-gradient(to right top, #ffffff, #f1f0f1, #e4e1e3, #d7d3d5, #cbc4c6, #cbc4c6, #cbc4c6, #cbc4c6, #d7d3d5, #e4e1e3, #f1f0f1, #ffffff);
+		}
+		// .skills__title
+		&__title {
+			margin: 0 0 20px 0;	
+		}
+		// .skills__nav
+		&__nav {
+		}
+		// .skills__list
+		&__list {
+			font-weight: 500;
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -15px;
+			row-gap: 30px;
+			font-size: 20px;
+			padding: 20px 0;
+		}
+        &__item {
+			padding: 0 15px;
+			flex: 0 1 33.333%;
+			// .skills__item_html
+			&_html {
+			}
+			// .skills__item_css
+			&_css {
+			}
+			// .skills__item_scss
+			&_scss {
+			}
+			// .skills__item_git
+			&_git {
+			}
+			// .skills__item_git-hub
+			&_git-hub {
+			}
+			// .skills__item_js
+			&_js {
+			}
+		}
+}
+.title {
+}
+// ================== code ==========================
+
+.code {
+		// .code__container
+		&__container {
+			padding: 25px 45px 30px;
+			background-image: linear-gradient(to bottom, #292727, #312f30, #3a3839, #424142, #4b4a4b, #4d4c4d, #4e4e4e, #505050, #4b4b4b, #464546, #424041, #3d3b3b);
+		}
+}
+// ================== ducations ==========================
+
+.educations {
+		// .educations__container
+		&__container {
+			padding: 25px 45px 30px;
+		}
+		// .educations__title
+		&__title {
+			margin: 0 0 20px 0;
+		}
+		// .educations__items
+		&__items {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+		// .educations__item
+		&__item {
+		}
+}
+.tilte {
+}
+// ================== item-ed ==========================
+
+.item-ed {
+	display: flex;
+	gap: 20px;
+	padding: 20px 0;
+	// justify-content: flex-start;
+	align-items: flex-start;
+	background-color: rgba(79, 79, 79, 0.178);
+		// .item-ed__year
+		&__year {
+			padding: 0 15px;
+			flex: 0 0 150px;
+			align-self: center;
+			justify-content: center;
+			font-size: 18px;
+			font-weight: 700;
+		}
+		// .item-ed__speciality
+		&__speciality {
+			font-size: 20px;
+			line-height: 1.5;
+		}
+}
+
+// ================== project ==========================
+
+.project {
+	// .project__container
+	&__container {
+		padding: 25px 45px 30px;
+	}
+	// .project__title
+	&__title {
+		margin: 0 0 20px 0;
+	}
+	// .project__link
+	&__link {
+		text-align: center;
+	}
+	// .project__img
+	&__img {
+		width: 370px;
+		transition: 0.3s;
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 0px 0px 10px 4px rgba(209, 209, 209);
+		}
+	}
+}
+.title {
+}
+
+// ================== english ==========================
+
+.english {
+		// .english__container
+		&__container {
+			padding: 25px 45px 30px;
+		}
+		// .english__title
+		&__title {
+			margin: 0 0 20px 0;
+		}
+		// .english__text
+		&__text {
+			
+		}
+}
+
+// ================== footer ==========================
+
+.footer {
+	// .footer__container
+	&__container {
+		padding: 20px 10px;
+		background-image: linear-gradient(to right, #cfcfcf, #cbcbcc, #c8c7c8, #c6c2c4, #c3bebf, #c5c0c1, #c7c1c3, #c9c3c5, #cfccce, #d6d4d6, #ddddde, #e5e5e5);
+		font-size: 12px;
+	}
+	// .footer__contacts
+	&__contacts {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
+	// .footer__bottom
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .footer__copyright
+	&__copyright {
+	}
+	// .footer__link
+	&__link {
+	}
+	// .footer__img
+	&__img {
+		width: 24px;
+		height: 24px;
+		object-fit: cover;
+		// .footer__img_rs
+		&_rs {
+			width: 86px;
+			height: 32px;
+			object-fit: cover;
+		}
+	}
+}
+.contacts {
+	// .contacts__img
+	&__img {
+
+	}
+	// .contacts__text
+	&__text {
+	}
+}
+
+
+
